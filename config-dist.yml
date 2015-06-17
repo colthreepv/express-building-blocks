@@ -1,0 +1,14 @@
+---
+# This YAML file describes production credentials for third-party services
+# and server configuration specific to `production` environment.
+
+# this is an example key for Mandrill service
+Mandrill:
+  KEY: 99fXj9I3Jh3YDvMbjupfDA
+
+crypto:
+  algorithm: aes-256-cbc
+  secret: production-block
+
+redis:
+  port: 6380

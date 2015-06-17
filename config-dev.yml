@@ -1,0 +1,14 @@
+---
+# This YAML file describes development credentials for third-party services
+# and server configuration specific to `development` environment.
+
+# this is an example key for Mandrill service
+Mandrill:
+  KEY: 8mzbxbI7tAJqvzU6fhAmx4
+
+crypto:
+  algorithm: aes-256-cbc
+  secret: express-building
+
+redis:
+  port: 6379

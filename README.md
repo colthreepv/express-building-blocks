@@ -13,7 +13,7 @@ Special Thanks to:
 
 # Ground-up Idea:
 
-Any controller in this project returns a Bluebird Promise, when it's resolved it's usually a payload to send to the user, or a context to be compiled in a page template.
+Any controller in this project returns a Bluebird Promise, when it's resolved it's usually a payload to send to the user, or a context to be compiled in a page template.  
 When the Promise gets rejected, it is usually an XError that describes which error code, HTTP response and HTTP code use to reply the user.
 
 Tests are not on endpoints, no `supertest` here, tests are on controllers, and are Promise-Based.

@@ -1,0 +1,4 @@
+# common configuration environment-agnostic
+
+redis:
+  expireTime: 86400 # 1 day in seconds
