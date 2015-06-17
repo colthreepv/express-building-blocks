@@ -1,3 +1,4 @@
+'use strict';
 let // node modules
   path = require('path');
 
@@ -10,7 +11,7 @@ let // modules
 require('./globals');
 
 // Express starts here!
-exports = module.exports = function (api, pages, errorHandler) {
+exports = module.exports = function (errorHandler) {
   let app = express();
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,8 +35,8 @@ exports = module.exports = function (api, pages, errorHandler) {
   }
 
   // attaching express.js 4.x routers here
-  app.use('/api', api);
-  app.use('/', pages);
+  // app.use('/api', api);
+  // app.use('/', pages);
 
   app.use(errorHandler);
 
@@ -43,4 +44,4 @@ exports = module.exports = function (api, pages, errorHandler) {
 };
 
 exports['@singleton'] = true;
-exports['@require'] = ['api', 'pages', 'components/errorHandler'];
+exports['@require'] = ['components/errorHandler'];

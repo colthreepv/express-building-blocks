@@ -1,3 +1,5 @@
+'use strict';
+
 let
   validation = require('express-validation'),
   ValidationError = validation.ValidationError;

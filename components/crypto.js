@@ -1,3 +1,4 @@
+'use strict';
 /**
  * crypto is a component to let you crypt/decrypt short messages
  * for long streams a Buffer-approach is strongly suggested

@@ -1,3 +1,5 @@
+'use strict';
+
 let Redis = require('ioredis');
 
 exports = module.exports = function (config) {

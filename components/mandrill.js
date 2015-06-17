@@ -1,3 +1,4 @@
+'use strict';
 // example components, not including mandrill in this package.json
 let mandrillLib = require('mandrill-api/mandrill');
 

@@ -1,3 +1,4 @@
+'use strict';
 /**
  * This file is uttermost importance.
  * Gives a solid reference to all components, based on __dirname, a.k.a.

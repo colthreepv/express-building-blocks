@@ -1,9 +1,8 @@
+'use strict';
 /**
  * File that reads the appropriate YAML configuration and
  * exposes a module.exports with the content to node.js
  */
-'use strict';
-
 let // node
   fs = require('fs'),
   path = require('path');

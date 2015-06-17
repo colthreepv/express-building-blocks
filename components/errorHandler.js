@@ -1,3 +1,5 @@
+'use strict';
+
 exports = module.exports = function (logger) {
   let log = logger('errorHandler');
 
