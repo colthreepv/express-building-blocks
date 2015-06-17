@@ -1,5 +1,5 @@
 # express-building-blocks
-This repository aims to provide reusable components for your actual and future express.js projects.
+This project aims to provide reusable components for your actual and future express.js project(s).
 
 The building blocks of **this** project (and I hope your projects as well) are:
 

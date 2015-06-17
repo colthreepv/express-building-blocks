@@ -17,6 +17,7 @@
     "guard-for-in": 0,
     "global-strict": 0,
     "no-floating-decimal": 2,
+    "no-mixed-requires": 0,
     "no-nested-ternary": 2,
     "no-unused-vars": [2, { "vars": "local", "args": "none" }],
     "no-underscore-dangle": 0,
