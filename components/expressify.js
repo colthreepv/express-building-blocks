@@ -24,30 +24,40 @@ exports = module.exports = function (logger) {
           });
         }
 
+        let statusCode = err.httpCode || 500;
+        let dumpData = {
+          body: req.body,
+          query: req.query,
+          params: req.params,
+          ip: req.ip,
+          code: err.code,
+          status: statusCode
+        };
         let payload = {};
         if (err.code) payload.code = err.code; // add code if available
 
         if (err.httpResponse) {
           payload.message = err.httpResponse;
-          log.error(err, 'handled error', { body: req.body, query: req.query, params: req.params, ip: req.ip, code: err.code, status: err.httpCode || 500, httpResponse: err.httpResponse });
+          dumpData.httpResponse = err.httpResponse;
+          log.error(err, 'handled error', dumpData);
 
           // response
-          if (page) return res.status(err.httpCode || 500).render('error', payload);
-          return res.status(err.httpCode || 500).send(payload);
+          if (page) return res.status(statusCode).render('error', payload);
+          return res.status(statusCode).send(payload);
         } else { // this kind of errors should "never" happen
-          log.error(err, 'non-handled error', { body: req.body, query: req.query, params: req.params, ip: req.ip, debug: err._debug, code: err.code, status: err.httpCode || 500 });
-          if (page) return res.status(err.httpCode || 500).render('error', payload);
-          return res.sendStatus(err.httpCode || 500);
+          log.error(err, 'non-handled error', dumpData);
+          if (page) return res.status(statusCode).render('error', payload);
+          return res.status(statusCode).send(payload);
         }
       })
-      .catch(Error, function (err) { // coding Error, or something not wrapped in an XError (still a coding error)
+      .catch(Error, function (err) { // coding Error
         log.error(err, 'coding error', { body: req.body, query: req.query, params: req.params, ip: req.ip, status: 500 });
         if (page) return res.status(500).render('error');
         return res.sendStatus(500);
       })
       .catch(function (err) {
-        console.log('WTFFF');
-        console.error(err.stack);
+        console.error('Non-Error Error, probably string:');
+        console.error(err);
         return res.sendStatus(500);
       });
     };
