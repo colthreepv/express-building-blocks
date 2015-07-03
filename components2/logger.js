@@ -20,8 +20,8 @@ function mockLogger (level, type) {
   };
 }
 
-exports = module.exports = function () {
-  return function logger (type) {
+exports = module.exports = function (log) {
+  return function (type) {
     if (process.env.NODE_ENV === 'production') {
       return bunyan.createLogger({ name: type });
     }
@@ -33,4 +33,4 @@ exports = module.exports = function () {
     };
   };
 };
-exports['@literal'] = true;
+// exports['@literal'] = true;
