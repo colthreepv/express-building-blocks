@@ -1,3 +1,4 @@
+/* ioc:ignore */
 'use strict';
 
 let Redis = require('ioredis');

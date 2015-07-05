@@ -1,12 +1,9 @@
 'use strict';
 
-// let
-//   ioc = require('./ioc'),
-//   logger = ioc.create('components/logger');
-
-let ioc = require('./ioc');
-
+var ioc = require('./ioc');
 ioc.inject(function (log, logger) {
-  // let testLogger = logger('testLogger');
   log.info('Hello World!');
+  log.warning(new Error('This is a big failure sir'));
 });
+ioc.inject(require('./config'));
+

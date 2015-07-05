@@ -1,3 +1,4 @@
+/* ioc:ignore */
 'use strict';
 
 exports = module.exports = function (logger) {
