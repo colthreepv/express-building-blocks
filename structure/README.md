@@ -1,5 +1,5 @@
 # Structure
-
+![structure](https://cloud.githubusercontent.com/assets/2657230/9674591/b87c91e8-52b2-11e5-92b7-0bdebd52bbca.png)
 This directory illustrates a plausible express.js application structure: 
 
   * handling multiple configuration
