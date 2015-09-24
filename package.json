@@ -19,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/mrgamer/express-building-blocks/issues"
   },
-  "homepage": "https://github.com/mrgamer/express-building-blocks#readme",
-  "dependencies": {
-    "electrolyte": "0.0.6"
-  }
+  "homepage": "https://github.com/mrgamer/express-building-blocks#readme"
 }
