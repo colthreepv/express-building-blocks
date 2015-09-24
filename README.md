@@ -19,7 +19,7 @@ When the Promise gets rejected, it is usually an XError that describes which err
 
 Tests are not on endpoints, no `supertest` here, tests are on controllers, and are Promise-Based.
 
-# General components and specific components for your Application
+# Generic components and specific components for your Application
 In web services specific solutions are sometimes required, while you don't want to publish those, as they *might* reflect business logic, happens usually to **not publish anything at all**, keeping the entire project closed source.
 
 This repository shows how a middle-ground is achievable through using DI, and specifically electrolyte.
