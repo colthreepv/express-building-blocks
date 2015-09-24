@@ -3,7 +3,7 @@ This project aims to provide reusable components for your actual and future expr
 
 The building blocks of **this** project (and I hope your projects as well) are:
 
-  * [io.js](https://iojs.org/) out since months and it has brought more fresh air than we seen in years.
+  * [node.js](https://nodejs.org/) 4.x the, new LTS of Node Foundation, and it has brought more fresh air than we seen in years.
   * [Bluebird](https://github.com/petkaantonov/bluebird) - if you don't know [Petka Antonov](https://github.com/petkaantonov) jewel, you have some reading to do
   * [XError](https://github.com/yzarubin/x-error) - Javascript errors for web services
   * [Electrolyte](https://github.com/jaredhanson/electrolyte) - Inversion of Control for node.js, provides a Dependency Injection mechanism similar to what you've seen on Angular.js or more advanced frameworks
