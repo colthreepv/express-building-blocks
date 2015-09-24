@@ -15,8 +15,15 @@ const colors = {
 // In testing bunyan gets mocked and outputted in console with timestamps
 function mockLogger (level, type) {
   return function () { // builds something like ERROR: { data: 'hello world' }
-    Array.prototype.unshift.call(arguments, colors[level](type.toUpperCase()) + ':');
-    util.log.apply(null, arguments);
+    let args = Array.prototype.filter.call(arguments, function (arg) {
+      if (arg instanceof Error) {
+        util.log(arg.stack);
+        return false;
+      }
+      return true;
+    });
+    Array.prototype.unshift.call(args, colors[level](type.toUpperCase()) + ':');
+    util.log.apply(null, args);
   };
 }
 
