@@ -7,7 +7,7 @@ Mandrill:
   KEY: 8mzbxbI7tAJqvzU6fhAmx4
 
 crypto:
-  algorithm: aes-256-cbc
+  algorithm: aes-128-ofb
   secret: express-building
 
 redis:

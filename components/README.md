@@ -2,7 +2,7 @@ IoC components
 ==============
 
   * [crypto](crypto.js) - crypt and decrypt short text messages
-  * [errorHandler](errorHandler.js) - express top level error handler
+  * [error-handler](error-handler.js) - express top level error handler
   * [expressify](expressify.js) - converts a Promise-based controller to comply express.js
   * [logger](logger.js) - creates logger functions specific to a component
   * [mandrill](mandrill.js) - example component to customize a Mandrill instance with personal configuration

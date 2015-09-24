@@ -7,7 +7,7 @@ Mandrill:
   KEY: 99fXj9I3Jh3YDvMbjupfDA
 
 crypto:
-  algorithm: aes-256-cbc
+  algorithm: aes-128-ofb
   secret: production-block
 
 redis:

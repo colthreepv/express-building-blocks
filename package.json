@@ -1,6 +1,6 @@
 {
   "name": "express-building-blocks",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "reusable components for your actual and future express.js project(s)",
   "main": "components/",
   "scripts": {
