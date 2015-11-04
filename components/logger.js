@@ -29,7 +29,7 @@ function mockLogger (level, type) {
 
 exports = module.exports = function (type) {
   if (process.env.NODE_ENV === 'production') {
-    return bunyan.createLogger({ name: type });
+    return bunyan.createLogger({ name: type, stream: process.stderr });
   }
   return {
     log: mockLogger('log', type),
